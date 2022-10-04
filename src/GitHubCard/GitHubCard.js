@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 
-
 function GitHubCard() {
   const [gitHubName, setGitHubName] = useState("");
   const [gitHubURL, setGitHubURL] = useState("");
   const [gitHubAvatar, setGitHubAvatar] = useState("");
-  const [gitHubBlog, setGitHubBlog] = useState("");
+  const [gitHubBio, setGitHubBio] = useState("");
 
   useEffect(() => {
     fetch("https://api.github.com/users/AriesRedWar")
@@ -14,7 +13,7 @@ function GitHubCard() {
         setGitHubName(data.name);
         setGitHubURL(data.html_url);
         setGitHubAvatar(data.avatar_url);
-        setGitHubBlog(data.bio);
+        setGitHubBio(data.bio);
       });
   }, []);
 
@@ -27,17 +26,11 @@ function GitHubCard() {
           <button>Link to Github profile</button>
         </a>
         <hr class="solid"></hr>
-        <img
-          src={gitHubAvatar}
-          alt="Github profile"
-          width="200"
-          height="200"
-        />
+        <img src={gitHubAvatar} alt="Github profile" width="200" height="200" />
       </div>
       <div>
-        <h3>{gitHubBlog}</h3>
+        <h3>{gitHubBio}</h3>
       </div>
-
     </div>
   );
 }
