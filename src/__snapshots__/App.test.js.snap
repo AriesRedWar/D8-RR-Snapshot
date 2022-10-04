@@ -16,35 +16,34 @@ exports[`renders a snapshot 1`] = `
         }
       }
     >
-      <div
-        className="card"
-      >
+      <div>
         <div
-          className="card"
-          style={
-            Object {
-              "width": "18rem",
-            }
-          }
+          className="App"
         >
-          <img
-            className="card-img-top"
-            src="Mickey_Mouse.png"
-          />
-          <div
-            className="card-body"
+          <h1>
+            Github Profile Info:
+          </h1>
+          <h2 />
+          <a
+            href=""
+            target="_blank"
           >
-            <div
-              className="card-title h5"
-            >
-              Mickey Mouse
-            </div>
-            <p
-              className="card-text"
-            >
-              I am a cartoon character and am one of the world's most recognizable fictional characters.
-            </p>
-          </div>
+            <button>
+              Link to Github profile
+            </button>
+          </a>
+          <hr
+            class="solid"
+          />
+          <img
+            alt="Github profile"
+            height="200"
+            src=""
+            width="200"
+          />
+        </div>
+        <div>
+          <h3 />
         </div>
       </div>
     </div>
